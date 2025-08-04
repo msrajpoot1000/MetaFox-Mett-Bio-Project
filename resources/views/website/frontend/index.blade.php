@@ -109,7 +109,7 @@
 
     @section('write')
 
-        <!-- title page -->
+        <!-- hero section  -->
         <section class="slider home">
             <div class="swiper-container-TFL  mainslider">
                 <div class="swiper-wrapper">
@@ -176,10 +176,90 @@
             </div>
         </section>
 
+        {{-- swiper section  --}}
+        <section class="service-st wow fadeInUp">
+            <div class="container-TFL">
+                <div class="row">
+                    {{-- swiper-container --}}
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="team-mb-swiper1 box-shadow  swiper-new">
+                            <div class="swiper-wrapper">
+                                <div class="wrap-service swiper-slide">
+                                    <div class="image"><img src="assets/images/icon/home/1.png" alt="Labaid">
+                                    </div>
+                                    <div class="title">
+                                        <a href="service-detail.html" class="h6">Fast TurnAround</a>
+                                    </div>
+                                </div>
+                                <div class="wrap-service action swiper-slide">
+                                    <div class="image"><img src="assets/images/icon/home/2.png" alt="Labaid">
+                                    </div>
+                                    <div class="title">
+                                        <a href="service-detail.html" class="h6">Certified Accuracy</a>
+                                    </div>
+                                </div>
+                                <div class="wrap-service swiper-slide">
+                                    <div class="image"><img src="assets/images/icon/home/3.png" alt="Labaid">
+                                    </div>
+                                    <div class="title">
+                                        <a href="service-detail.html" class="h6">Deep Insight</a>
+                                    </div>
+                                </div>
+                                <div class="wrap-service swiper-slide">
+                                    <div class="image"><img src="assets/images/icon/home/4.png" alt="Labaid">
+                                    </div>
+                                    <div class="title">
+                                        <a href="service-detail.html" class="h6">Tailored Solutions</a>
+                                    </div>
+                                </div>
+                                <div class="wrap-service swiper-slide">
+                                    <div class="image"><img src="assets/images/icon/home/5.png" alt="Labaid">
+                                    </div>
+                                    <div class="title">
+                                        <a href="service-detail.html" class="h6">Sustainability Focus</a>
+                                    </div>
+                                </div>
+                                <div class="wrap-service swiper-slide">
+                                    <div class="image"><img src="assets/images/icon/home/6.png" alt="Labaid">
+                                    </div>
+                                    <div class="title">
+                                        <a href="service-detail.html" class="h6">Expert Focus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{-- three item section  --}}
+        <section class="service h2">
+            <div class="overlay"></div>
+            <div class="container-TFL">
+                <div class="row">
+                    @foreach ($serves as $serve)
+                        <div class="col-lg-4 col-md-12 col-sm-12 ">
+                            <div class="wrap-service wow fadeInUp">
+                                <div class="icon"><img src="{{ asset($serve->image) }}" alt="Labaid" id="serve">
+                                </div>
+                                <div class="title">
+                                    <h4>{{ $serve->name }}
+                                    </h4>
+                                    <p>{{ $serve->description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+
+
         {{-- about section  --}}
         <section class="about h2">
             <div class="overlay"></div>
-            <div class="container-TFL">
+            <div class="container-TFL" style="padding-bottom: 10rem">
                 <div class="row">
                     @if ($about)
                         <div class="wrap-abouth2">
@@ -240,86 +320,11 @@
             </div>
         </section>
 
-        <section class="service-st wow fadeInUp">
-            <div class="container-TFL">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="service-st-swiper box-shadow swiper-container swiper-new">
-                            <div class="swiper-wrapper">
-                                <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/1.png"
-                                            alt="Labaid">
-                                    </div>
-                                    <div class="title">
-                                        <a href="service-detail.html" class="h6">Fast TurnAround</a>
-                                    </div>
-                                </div>
-                                <div class="wrap-service action swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/2.png" alt="Labaid">
-                                    </div>
-                                    <div class="title">
-                                        <a href="service-detail.html" class="h6">Certified Accuracy</a>
-                                    </div>
-                                </div>
-                                <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/3.png"
-                                            alt="Labaid">
-                                    </div>
-                                    <div class="title">
-                                        <a href="service-detail.html" class="h6">Deep Insight</a>
-                                    </div>
-                                </div>
-                                <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/4.png" alt="Labaid">
-                                    </div>
-                                    <div class="title">
-                                        <a href="service-detail.html" class="h6">Tailored Solutions</a>
-                                    </div>
-                                </div>
-                                <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/5.png" alt="Labaid">
-                                    </div>
-                                    <div class="title">
-                                        <a href="service-detail.html" class="h6">Sustainability Focus</a>
-                                    </div>
-                                </div>
-                                <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/6.png"
-                                            alt="Labaid">
-                                    </div>
-                                    <div class="title">
-                                        <a href="service-detail.html" class="h6">Expert Focus</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="service h2">
-            <div class="overlay"></div>
-            <div class="container-TFL">
-                <div class="row">
-                    @foreach ($serves as $serve)
-                        <div class="col-lg-4 col-md-12 col-sm-12 ">
-                            <div class="wrap-service wow fadeInUp">
-                                <div class="icon"><img src="{{ asset($serve->image) }}" alt="Labaid"
-                                        id="serve">
-                                </div>
-                                <div class="title">
-                                    <h4>{{ $serve->name }}
-                                    </h4>
-                                    <p>{{ $serve->description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
 
+
+
+        {{-- quick section  --}}
         <section class="team-mb wow fadeInUp">
             <div class="container-TFL">
                 <div class="row">
@@ -392,6 +397,7 @@
             </div>
         </section>
 
+        {{-- why section  --}}
         <section class="choose">
             <div class="overlay"></div>
             <div class="container-TFL">
@@ -468,8 +474,71 @@
 
         </section>
 
-        <section class="skill">
+
+
+        {{-- industry section  --}}
+        <section class="lt-blog wow fadeInUp">
             <div class="container-TFL">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="inner">
+                            <div class="group">
+                                <h3>Industry we serve</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="post-box-swiper box-shadow swiper-container position-relative">
+                            <div class="swiper-wrapper">
+                                @foreach ($allBlogs as $blog)
+                                    <div class="post-box swiper-slide">
+                                        <div class="box-img">
+                                            <a href="blogdetail.html">
+                                                <img src="{{ asset('uploads/' . $blog->image) }}" alt="Labaid"
+                                                    class="img-fluid" />
+                                            </a>
+                                        </div>
+                                        <div class="content-post wr">
+                                            <h5><a href="blogdetail.html">{{ $blog->heading }}</a></h5>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+
+                            <!-- Pagination Dots -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- Navigation Buttons -->
+                            <div class="swiper-button-prev" style="color: blue;"></div>
+                            <div class="swiper-button-next" style="color: blue;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        {{-- contact us section  --}}
+        <section class="contact wow fadeInUp">
+            <div class="overlay"></div>
+            <div class="container-TFL">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <h5>CONTACT US</h5>
+                            <h1>Let’s Work Together! Book your visit.</h1>
+                            <a class="button-st" href="contact.html">+ Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        {{-- number increase section  --}}
+        <section class="skill">
+            <div class="container-TFL" style="padding-bottom: 10rem">
                 <div class="row">
 
                     <div class="col-lg-12 col-md-12 col-sm-12 tf-counter">
@@ -516,47 +585,6 @@
                                 </div>
 
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="lt-blog wow fadeInUp">
-            <div class="container-TFL">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="inner">
-                            <div class="group">
-                                <h3>Industry we serve</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="post-box-swiper box-shadow swiper-container position-relative">
-                            <div class="swiper-wrapper">
-                                @foreach ($allBlogs as $blog)
-                                    <div class="post-box swiper-slide">
-                                        <div class="box-img">
-                                            <a href="blogdetail.html">
-                                                <img src="{{ asset('uploads/' . $blog->image) }}" alt="Labaid"
-                                                    class="img-fluid" />
-                                            </a>
-                                        </div>
-                                        <div class="content-post wr">
-                                            <h5><a href="blogdetail.html">{{ $blog->heading }}</a></h5>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-
-                            <!-- Pagination Dots -->
-                            <div class="swiper-pagination"></div>
-
-                            <!-- Navigation Buttons -->
-                            <div class="swiper-button-prev" style="color: blue;"></div>
-                            <div class="swiper-button-next" style="color: blue;"></div>
                         </div>
                     </div>
                 </div>

@@ -302,6 +302,7 @@ var swiper = new Swiper(".post-box-swiper", {
         },
     },
 });
+
 var swiper = new Swiper(".team-mb-swiper", {
     loop: false,
     slidesPerView: 1,
@@ -330,6 +331,48 @@ var swiper = new Swiper(".team-mb-swiper", {
         },
     },
 });
+var swiper = new Swiper(".team-mb-swiper1", {
+    loop: false,
+    slidesPerView: 6, // Default to 6
+    spaceBetween: 24,
+    navigation: {
+        clickable: true,
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        550: {
+            slidesPerView: 2,
+            spaceBetween: 17,
+        },
+        720: {
+            slidesPerView: 3,
+            spaceBetween: 17,
+        },
+        991: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 5,
+            spaceBetween: 24,
+        },
+        1400: {
+            slidesPerView: 6,
+            spaceBetween: 24,
+        },
+    },
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".service-st-swiper", {
         loop: false,

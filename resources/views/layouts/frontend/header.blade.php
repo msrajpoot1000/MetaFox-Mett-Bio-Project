@@ -106,8 +106,8 @@
                                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                                 <!--<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>-->
                                                 <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                                <li><a href="tel:{{ $companyinfos->phone }}">Call Me At
-                                                        {{ $companyinfos->phone }}</i></a></li>
+                                                {{-- <li><a href="tel:{{ $companyinfos->phone }}">Call Me At
+                                                        {{ $companyinfos->phone }}</i></a></li> --}}
 
                                                 {{-- <li style=""><a href="tel:{{ $companyinfos->phone }}"
                                                         style="">
@@ -128,13 +128,14 @@
 
                             {{-- <h5 class="content-center"><a class="text-color-3" href="#">Accreditation</a></h5> --}}
                         </div>
-                        <div class="top-bar-right bt">
-
-                            {{-- <h6 class="content-right"><a class="text-color-4 bf" href="cart.html">My Cart</a>
-                            </h6> --}}
-
+                        <div class="top-bar-right bt " style="">
+                            <a href="tel:+{{ $companyinfos->phone }}" class="sc-button btn-1" style="font-size: 1.5rem">
+                                <span>Call At +</span>{{ $companyinfos->phone }}
+                            </a>
                         </div>
+
                         <div class="flat-button-top">
+
                             <a href="contact.html" class="sc-button btn-1"><span>+ Get Appointed
                                 </span></a>
                         </div>
@@ -266,12 +267,21 @@
                                     <li>
                                         <a href="contact.html">Career</a>
                                     </li>
+
                                 </ul>
+
+
                             </nav><!-- /#main-nav -->
 
 
+
+
+
                         </div>
+
+
                     </div>
+
                 </div>
             </div>
         </div>
