@@ -4,9 +4,54 @@
     $categories = DB::table('productcategorys')->get();
     $serves = DB::table('serves')->get();
 @endphp
-  
-@if($companyinfos) 
 
+<style>
+    /* Submenu positioning */
+    .menu-item-has-children {
+        position: relative;
+    }
+
+    /* First level dropdown */
+    .sub-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 200px;
+        z-index: 999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Show submenu on hover */
+    .menu-item-has-children:hover>.sub-menu {
+        display: block;
+    }
+
+    /* Sub-submenu flyout (to right) */
+    .sub-menu .menu-item-has-children>.sub-menu {
+        top: 0;
+        left: 100%;
+    }
+
+    /* Ensure sub-submenu is hidden by default */
+    .sub-menu .menu-item-has-children>.sub-menu {
+        display: none;
+    }
+
+    /* Show sub-submenu on hover */
+    .sub-menu .menu-item-has-children:hover>.sub-menu {
+        display: block;
+    }
+
+    .subsubmenu-arrow {
+        font-size: 2rem;
+        color: black;
+        margin-right: 0.5rem;
+    }
+</style>
+
+@if ($companyinfos)
     <div id="top-bar-bt">
         <div class="container-TFL">
             <div class="row">
@@ -15,8 +60,8 @@
                         <div id="site-logo-left" class="clearfix">
                             <div id="site-logo-inner">
                                 <a href="index.html" rel="home" class="main-logo">
-                                    <img id="logo_header" src="{{ asset('assets/images/logo/' . $companyinfos->logo) }}" alt="img"
-                                        width="146" height="65">
+                                    <img id="logo_header" src="{{ asset('assets/images/logo/' . $companyinfos->logo) }}"
+                                        alt="img" width="146" height="65">
                                 </a>
                             </div>
                         </div>
@@ -49,49 +94,84 @@
                 <div class="col-md-12">
                     <div id="site-header-inner">
                         <div class="wrap-box relative">
-                            <div class="logo-mobile"><img src="{{ asset('assets/images/logo/' . $companyinfos->logo) }}" alt="Labaid"></div>
+                            <div class="logo-mobile"><img src="{{ asset('assets/images/logo/' . $companyinfos->logo) }}"
+                                    alt="Labaid"></div>
                             <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
                             <nav id="main-nav" class="main-nav">
                                 <ul id="menu-primary-menu" class="menu">
-                                    
+
                                     <li class="menu-item">
                                         <a href="/">Home</a>
                                     </li>
-                                    
-                                    <li class="menu-item">
-                                        <a href="{{ route('website.frontend.information') }}">Information</a>
-                                    </li>
-                                    
-                                    <li class="menu-item menu-item-has-children">
-                                        <a href="#">Shop</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="shop.html">Shop</a></li>
-                                            <li class="menu-item"><a href="shopdetail.html">Shop Details</a>
-                                            </li>
-                                            <li class="menu-item"><a href="checkout.html">Check Out</a></li>
-                                            <li class="menu-item"><a href="cart.html">Cart</a></li>
 
+                                    <li class="menu-item">
+                                        <a href="/">About Us</a>
+                                    </li>
+
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="#">Our Business</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="shop.html">Testing</a></li>
+                                            <li class="menu-item"><a href="shopdetail.html">Inspection & Survey</a></li>
+                                            <li class="menu-item"><a href="checkout.html">Failure Analysis</a></li>
+                                            <li class="menu-item"><a href="cart.html">Research & Development</a></li>
+                                            <li class="menu-item menu-item-has-children">
+                                                <a href="cart.html">Bespoke Product</a>
+                                                <ul class="sub-menu" style="padding-left:2rem">
+                                                    <li class="menu-item"><a href="custom-design.html"><span
+                                                                class="subsubmenu-arrow">&gt;</span>Custom Design</a>
+                                                    </li>
+                                                    <li class="menu-item"><a href="material-selection.html"><span
+                                                                class="subsubmenu-arrow">&gt;</span>Material
+                                                            Selection</a></li>
+                                                    <li class="menu-item"><a href="prototype-development.html"><span
+                                                                class="subsubmenu-arrow">&gt;</span>Prototype
+                                                            Development</a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children">
+
+
+
+
+                                    <li class="menu-item">
+                                        <a href="/">Sustainabilty</a>
+                                    </li>
+
+                                    <li class="menu-item">
+                                        <a href="/">Quality Policy</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{{ route('website.frontend.information') }}"><span>
+                                                Industry-Certified</span></a>
+                                    </li>
+
+                                    {{-- <li class="menu-item">
+                                        <a href="{{ route('website.frontend.information') }}">Information</a>
+                                    </li> --}}
+
+
+                                    {{-- <li class="menu-item menu-item-has-children">
                                         <a href="#">Services</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a href="service-page.html">Service</a></li>
                                             <li class="menu-item"><a href="service-detail.html">Service
                                                     Details</a></li>
                                         </ul>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children">
+                                    </li> --}}
+
+                                    {{-- <li class="menu-item menu-item-has-children">
                                         <a href="#">Research</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a href="research.html">Research</a></li>
-                                            <li class="menu-item"><a
-                                                    href="research-single.html">Research-single</a>
+                                            <li class="menu-item"><a href="research-single.html">Research-single</a>
                                             </li>
 
                                         </ul>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children  ">
+                                    </li> --}}
+
+                                    {{-- <li class="menu-item menu-item-has-children  ">
                                         <a href="#">Page</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item "><a href="about.html">About</a>
@@ -108,8 +188,9 @@
                                             <li class="menu-item"><a href="careerspage.html">Careers</a>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li class="menu-item menu-item-has-children ">
+                                    </li> --}}
+
+                                    {{-- <li class="menu-item menu-item-has-children ">
                                         <a href="#">Blogs</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a href="bloggrid.html">Blog</a></li>
@@ -118,10 +199,20 @@
                                             <li class="menu-item"><a href="blogstandard.html">Blog Standard</a>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
 
-                                    <li class="menu-item">
-                                        <a href="contact.html">Contact Us</a>
+
+
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="#">Others</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="contact.html">Contact Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">Career</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </nav><!-- /#main-nav -->
@@ -137,7 +228,8 @@
                                     </ul>
                                 </div>
                                 <div class="wrap-call">
-                                    <h4>Call Me <a href="tel:{{ $companyinfos->phone }}">+ {{ $companyinfos->phone }}</a></h4>
+                                    <h4>Call Me <a href="tel:{{ $companyinfos->phone }}">+
+                                            {{ $companyinfos->phone }}</a></h4>
                                 </div>
                             </div>
 
@@ -148,4 +240,4 @@
         </div>
 
     </header>
- @endif   
+@endif

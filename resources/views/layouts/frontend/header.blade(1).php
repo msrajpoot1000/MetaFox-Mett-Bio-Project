@@ -80,6 +80,9 @@
                     <li>
                         <a href="contact.html">Contact Us</a>
                     </li>
+                    <li>
+                        <a href="contact.html">Career</a>
+                    </li>
                 </ul>
                
             </div>

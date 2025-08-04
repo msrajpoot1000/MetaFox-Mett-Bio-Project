@@ -250,13 +250,11 @@ var swiper = new Swiper(".carousel-6", {
     },
 });
 
-
 var swiper = new Swiper(".trusted-swiper", {
     loop: false,
 
     spaceBetween: 0,
     breakpoints: {
-        
         0: {
             slidesPerView: 2,
             spaceBetween: 24,
@@ -332,37 +330,18 @@ var swiper = new Swiper(".team-mb-swiper", {
         },
     },
 });
-var swiper = new Swiper(".service-st-swiper", {
-    loop: false,
-    slidesPerView: 1,
-    spaceBetween: 14,
-    navigation: {
-        clickable: true,
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        550: {
-            slidesPerView: 2,
-            spaceBetween: 24,
+document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".service-st-swiper", {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 14,
+        breakpoints: {
+            550: { slidesPerView: 2, spaceBetween: 24 },
+            720: { slidesPerView: 3, spaceBetween: 24 },
+            991: { slidesPerView: 4, spaceBetween: 24 },
+            1200: { slidesPerView: 6, spaceBetween: 24 },
         },
-        720: {
-            slidesPerView: 3,
-            spaceBetween: 24,
-        },
-        991: {
-            slidesPerView: 4,
-            spaceBetween: 24,
-        },
-        1200: {
-            slidesPerView: 6,
-            spaceBetween: 24,
-        },
-    },
+    });
 });
 
 var swiper = new Swiper(".special-swiper", {
