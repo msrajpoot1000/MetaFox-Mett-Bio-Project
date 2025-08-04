@@ -50,27 +50,26 @@
         margin-right: 0.5rem;
     }
 
-   .menu-item {
-    position: relative;
-}
+    .menu-item {
+        position: relative;
+    }
 
-/* Hide SubSubItems by default */
-.SubSubItems {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    min-width: 200px;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 999;
-}
+    /* Hide SubSubItems by default */
+    .SubSubItems {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        min-width: 200px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
 
-/* Show SubSubItems when hovering on parent LI */
-.menu-item:hover > .SubSubItems {
-    display: block;
-}
-
+    /* Show SubSubItems when hovering on parent LI */
+    .menu-item:hover>.SubSubItems {
+        display: block;
+    }
 </style>
 
 @if ($companyinfos)
@@ -98,12 +97,14 @@
                                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                                 <!--<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>-->
                                                 <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                                <li><a href="tel:{{ $companyinfos->phone }}">Call Me At
+                                                        {{ $companyinfos->phone }}</i></a></li>
 
-                                                <li style=""><a href="tel:{{ $companyinfos->phone }}"
+                                                {{-- <li style=""><a href="tel:{{ $companyinfos->phone }}"
                                                         style="">
                                                         <span>Call Me At </span><span
                                                             style="font-weight: bold">{{ $companyinfos->phone }}</span></a>
-                                                </li>
+                                                </li> --}}
 
                                             </ul>
 
