@@ -50,21 +50,27 @@
         margin-right: 0.5rem;
     }
 
-    .SubSubItems {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 100%;
-        min-width: 200px;
-        background: white;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
+   .menu-item {
+    position: relative;
+}
 
-    /* Show the SubSubItems when hovering on the <a> */
-    .subCat:hover+.SubSubItems {
-        display: block;
-    }
+/* Hide SubSubItems by default */
+.SubSubItems {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 200px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+/* Show SubSubItems when hovering on parent LI */
+.menu-item:hover > .SubSubItems {
+    display: block;
+}
+
 </style>
 
 @if ($companyinfos)
@@ -155,7 +161,7 @@
                                             <li class="menu-item"><a href="shopdetail.html">Inspection & Survey</a></li>
                                             <li class="menu-item"><a href="checkout.html">Failure Analysis</a></li>
                                             <li class="menu-item"><a href="cart.html">Research & Development</a></li>
-                                            <li class="menu-item menu-item-has-children">
+                                            <li class="menu-item">
                                                 <a href="cart.html" class="subCat">Bespoke Product</a>
                                                 <ul Class="SubSubItems">
                                                     <li class="menu-item"><a href="custom-design.html">Custom Design</a>
