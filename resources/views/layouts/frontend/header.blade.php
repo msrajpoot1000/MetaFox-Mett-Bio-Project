@@ -15,7 +15,7 @@
     .sub-menu {
         display: none;
         position: absolute;
-        top: 100%;
+        top: -100%;
         left: 0;
         background: white;
         min-width: 200px;
@@ -50,15 +50,24 @@
         margin-right: 0.5rem;
     }
 
-    .menu-item {
+    .menu-item-special {
         position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
-    /* Hide SubSubItems by default */
+    /* Target the first child to be reference */
+    .menu-item-special>a {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Position SubSubItems relative to the first child */
     .SubSubItems {
         display: none;
         position: absolute;
-        top: 0;
+        top: -400%;
+        /* Aligns to the first child's top */
         left: 100%;
         min-width: 200px;
         background: white;
@@ -66,8 +75,8 @@
         z-index: 999;
     }
 
-    /* Show SubSubItems when hovering on parent LI */
-    .menu-item:hover>.SubSubItems {
+    /* Show SubSubItems on hover of parent <li> */
+    .menu-item-special:hover>.SubSubItems {
         display: block;
     }
 </style>
@@ -162,17 +171,24 @@
                                             <li class="menu-item"><a href="shopdetail.html">Inspection & Survey</a></li>
                                             <li class="menu-item"><a href="checkout.html">Failure Analysis</a></li>
                                             <li class="menu-item"><a href="cart.html">Research & Development</a></li>
-                                            <li class="menu-item">
+                                            <li class="menu-item menu-item-special">
                                                 <a href="cart.html" class="subCat">Bespoke Product</a>
-                                                <ul Class="SubSubItems">
-                                                    <li class="menu-item"><a href="custom-design.html">Custom Design</a>
+                                                <ul class="SubSubItems">
+                                                    <li class="menu-item"><a href="custom-design.html">Corrosion Testing
+                                                            Equipment & Systems</a></li>
+                                                    <li class="menu-item"><a href="material-selection.html">Volatile
+                                                            Corrosion Inhibitor</a></li>
+                                                    <li class="menu-item"><a href="prototype-development.html">Corrosion
+                                                            Coupon</a></li>
+                                                    <li class="menu-item"><a href="prototype-development.html">LIMS</a>
                                                     </li>
-                                                    <li class="menu-item"><a href="material-selection.html">Material
-                                                            Selection</a></li>
-                                                    <li class="menu-item"><a href="prototype-development.html">Prototype
+                                                    <li class="menu-item"><a href="prototype-development.html">Flow
+                                                            Reactions Systems</a></li>
+                                                    <li class="menu-item"><a href="prototype-development.html">Project
                                                             Development</a></li>
                                                 </ul>
                                             </li>
+
                                         </ul>
                                     </li>
 

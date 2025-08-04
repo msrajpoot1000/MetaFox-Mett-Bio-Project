@@ -247,7 +247,7 @@
                         <div class="service-st-swiper box-shadow swiper-container swiper-new">
                             <div class="swiper-wrapper">
                                 <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/service-h1-1-hv.png"
+                                    <div class="image"><img src="assets/images/icon/home/1.png"
                                             alt="Labaid">
                                     </div>
                                     <div class="title">
@@ -255,14 +255,14 @@
                                     </div>
                                 </div>
                                 <div class="wrap-service action swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/service-h1-2.png" alt="Labaid">
+                                    <div class="image"><img src="assets/images/icon/home/2.png" alt="Labaid">
                                     </div>
                                     <div class="title">
                                         <a href="service-detail.html" class="h6">Certified Accuracy</a>
                                     </div>
                                 </div>
                                 <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/deep-insight.png"
+                                    <div class="image"><img src="assets/images/icon/home/3.png"
                                             alt="Labaid">
                                     </div>
                                     <div class="title">
@@ -270,21 +270,21 @@
                                     </div>
                                 </div>
                                 <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/tail-sol.png" alt="Labaid">
+                                    <div class="image"><img src="assets/images/icon/home/4.png" alt="Labaid">
                                     </div>
                                     <div class="title">
                                         <a href="service-detail.html" class="h6">Tailored Solutions</a>
                                     </div>
                                 </div>
                                 <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/sus-focus.png" alt="Labaid">
+                                    <div class="image"><img src="assets/images/icon/home/5.png" alt="Labaid">
                                     </div>
                                     <div class="title">
                                         <a href="service-detail.html" class="h6">Sustainability Focus</a>
                                     </div>
                                 </div>
                                 <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/expert-focus.png"
+                                    <div class="image"><img src="assets/images/icon/home/6.png"
                                             alt="Labaid">
                                     </div>
                                     <div class="title">
