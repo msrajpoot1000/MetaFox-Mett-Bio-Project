@@ -95,8 +95,13 @@
                 }
             }
 
-            .swiper-new img{
-                 width:4rem;
+            .swiper-new img {
+                width: 4rem;
+            }
+
+            .why-img img {
+                width: 3.5rem !important;
+                /* border: 1px solid red */
             }
         </style>
 
@@ -265,16 +270,14 @@
                                     </div>
                                 </div>
                                 <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/tail-sol.png"
-                                            alt="Labaid">
+                                    <div class="image"><img src="assets/images/icon/home/tail-sol.png" alt="Labaid">
                                     </div>
                                     <div class="title">
                                         <a href="service-detail.html" class="h6">Tailored Solutions</a>
                                     </div>
                                 </div>
                                 <div class="wrap-service swiper-slide">
-                                    <div class="image"><img src="assets/images/icon/home/sus-focus.png"
-                                            alt="Labaid">
+                                    <div class="image"><img src="assets/images/icon/home/sus-focus.png" alt="Labaid">
                                     </div>
                                     <div class="title">
                                         <a href="service-detail.html" class="h6">Sustainability Focus</a>
@@ -395,7 +398,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="col-left col-style wow fadeInUp">
-                            <div class="content-choose tfanimated">
+                            <div class="content-choose tfanimated why-img">
                                 <div class="title-section style2 mb29 tfanimated">
                                     <h6 class="sub-title"><span>Why Choose Us?</span> </h6>
                                     <h1 class="title">
@@ -408,7 +411,7 @@
                                     core values every day, we deliver superior outcomes for our clients and partners.
                                 </p>
 
-                                <div class="wrap-icon-box">
+                                <div class="wrap-icon-box ">
                                     <div class="icon-box st1">
                                         <div class="img">
                                             <img src="assets/images/icon/home/chooseh1-1.png" alt="Labaid">
@@ -417,7 +420,7 @@
                                     </div>
                                     <div class="icon-box st2">
                                         <div class="img style">
-                                            <img src="assets/images/icon/home/chooseh1-2.png" alt="Labaid">
+                                            <img src="assets/images/icon/home/service.png" alt="Labaid">
                                         </div>
                                         <div class="desc"><a href="about.html">Service First</a></div>
                                     </div>
@@ -425,13 +428,13 @@
                                 <div class="wrap-icon-box">
                                     <div class="icon-box st1">
                                         <div class="img">
-                                            <img src="assets/images/icon/home/chooseh1-3.png" alt="Labaid">
+                                            <img src="assets/images/icon/home/commit.png" alt="Labaid">
                                         </div>
                                         <div class="desc"><a href="about.html">Commitment</a></div>
                                     </div>
                                     <div class="icon-box st2">
                                         <div class="img style">
-                                            <img src="assets/images/icon/home/chooseh1-4.png" alt="Labaid">
+                                            <img src="assets/images/icon/home/trust.png" alt="Labaid">
                                         </div>
                                         <div class="desc"><a href="about.html">Trust
                                             </a></div>
@@ -440,13 +443,13 @@
                                 <div class="wrap-icon-box">
                                     <div class="icon-box st1">
                                         <div class="img">
-                                            <img src="assets/images/icon/home/chooseh1-5.png" alt="Labaid">
+                                            <img src="assets/images/icon/home/exce.png" alt="Labaid">
                                         </div>
                                         <div class="desc"><a href="about.html">Excellence</a></div>
                                     </div>
                                     <div class="icon-box st2">
                                         <div class="img style">
-                                            <img src="assets/images/icon/home/chooseh1-6.png" alt="Labaid">
+                                            <img src="assets/images/icon/home/safety.png" alt="Labaid">
                                         </div>
                                         <div class="desc"><a href="about.html">Safety
                                             </a></div>

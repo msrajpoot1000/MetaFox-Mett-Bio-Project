@@ -49,6 +49,22 @@
         color: black;
         margin-right: 0.5rem;
     }
+
+    .SubSubItems {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        min-width: 200px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    /* Show the SubSubItems when hovering on the <a> */
+    .subCat:hover+.SubSubItems {
+        display: block;
+    }
 </style>
 
 @if ($companyinfos)
@@ -66,16 +82,40 @@
                             </div>
                         </div>
                         <div class="top-bar-content">
-                            <h5 class="content-center"><a class="text-color-3" href="#">Insurance </a></h5>
-                            <h5 class="content-center"><a class="text-color-3 active" href="service-page.html">Provider
-                                    Services</a>
-                            </h5>
-                            <h5 class="content-center"><a class="text-color-3" href="#">Accreditation</a></h5>
+                            <h5 class="content-center" style="diaplay:flex;flex-direction:row"><a class="text-color-3"
+                                    href="#">
+                                    <div class="social">
+                                        <div class="wrap-social">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                <!--<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>-->
+                                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+
+                                                <li style=""><a href="tel:{{ $companyinfos->phone }}"
+                                                        style="">
+                                                        <span>Call Me At </span><span
+                                                            style="font-weight: bold">{{ $companyinfos->phone }}</span></a>
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                    {{-- <div class="wrap-call">
+                                        <h4>Call Me <a href="tel:{{ $companyinfos->phone }}">+
+                                                {{ $companyinfos->phone }}</a></h4>
+                                    </div> --}}
+                                </a></h5>
+
+                            {{-- <h5 class="content-center"><a class="text-color-3" href="#">Accreditation</a></h5> --}}
                         </div>
                         <div class="top-bar-right bt">
 
-                            <h6 class="content-right"><a class="text-color-4 bf" href="cart.html">My Cart</a>
-                            </h6>
+                            {{-- <h6 class="content-right"><a class="text-color-4 bf" href="cart.html">My Cart</a>
+                            </h6> --}}
 
                         </div>
                         <div class="flat-button-top">
@@ -116,24 +156,18 @@
                                             <li class="menu-item"><a href="checkout.html">Failure Analysis</a></li>
                                             <li class="menu-item"><a href="cart.html">Research & Development</a></li>
                                             <li class="menu-item menu-item-has-children">
-                                                <a href="cart.html">Bespoke Product</a>
-                                                <ul class="sub-menu" style="padding-left:2rem">
-                                                    <li class="menu-item"><a href="custom-design.html"><span
-                                                                class="subsubmenu-arrow">&gt;</span>Custom Design</a>
+                                                <a href="cart.html" class="subCat">Bespoke Product</a>
+                                                <ul Class="SubSubItems">
+                                                    <li class="menu-item"><a href="custom-design.html">Custom Design</a>
                                                     </li>
-                                                    <li class="menu-item"><a href="material-selection.html"><span
-                                                                class="subsubmenu-arrow">&gt;</span>Material
+                                                    <li class="menu-item"><a href="material-selection.html">Material
                                                             Selection</a></li>
-                                                    <li class="menu-item"><a href="prototype-development.html"><span
-                                                                class="subsubmenu-arrow">&gt;</span>Prototype
+                                                    <li class="menu-item"><a href="prototype-development.html">Prototype
                                                             Development</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
-
-
-
 
                                     <li class="menu-item">
                                         <a href="/">Sustainabilty</a>
@@ -203,35 +237,15 @@
 
 
 
-                                    <li class="menu-item menu-item-has-children">
-                                        <a href="#">Others</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="contact.html">Contact Us</a>
-                                            </li>
-                                            <li>
-                                                <a href="contact.html">Career</a>
-                                            </li>
-                                        </ul>
+                                    <li class="menu-item">
+                                        <a href="contact.html">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Career</a>
                                     </li>
                                 </ul>
                             </nav><!-- /#main-nav -->
-                            <div class="social">
-                                <div class="wrap-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <!--<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>-->
-                                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
 
-                                    </ul>
-                                </div>
-                                <div class="wrap-call">
-                                    <h4>Call Me <a href="tel:{{ $companyinfos->phone }}">+
-                                            {{ $companyinfos->phone }}</a></h4>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
